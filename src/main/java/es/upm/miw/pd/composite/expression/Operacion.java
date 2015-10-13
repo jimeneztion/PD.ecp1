@@ -1,33 +1,31 @@
 package es.upm.miw.pd.composite.expression;
-import es.upm.miw.pd.composite.expression.Expresion;
 
-public abstract class Operacion extends Expresion {
+import es.upm.miw.pd.composite.expression.ExpresionMain;
 
-    private Expresion expresion1, expresion2;
+public abstract class Operacion extends ExpresionMain {
 
-    public Operacion(Expresion expresion1, Expresion expresion2) {
+    private ExpresionMain expresion1, expresion2;
+
+    public Operacion(ExpresionMain expresion1, ExpresionMain expresion2) {
         super();
         this.expresion1 = expresion1;
         this.expresion2 = expresion2;
     }
 
-    public Expresion getExpresion1() {
+    public ExpresionMain getExpresion1() {
         return expresion1;
     }
 
-    public void setExpresion1(Expresion expresion1) {
+    public void setExpresion1(ExpresionMain expresion1) {
         this.expresion1 = expresion1;
     }
 
-    public Expresion getExpresion2() {
+    public ExpresionMain getExpresion2() {
         return expresion2;
     }
 
-    public void setExpresion2(Expresion expresion2) {
+    public void setExpresion2(ExpresionMain expresion2) {
         this.expresion2 = expresion2;
     }
-
-    public abstract int operar();
-    
 
 }

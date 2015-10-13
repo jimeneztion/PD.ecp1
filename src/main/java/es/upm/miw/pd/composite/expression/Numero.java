@@ -2,8 +2,15 @@ package es.upm.miw.pd.composite.expression;
 
 public class Numero extends ExpresionMain {
 
-    public Numero(int i) {
-        // TODO Auto-generated constructor stub
+    private int numero;
+
+    public Numero(int numero) {
+        super();
+        this.numero = numero;
+    }
+
+    public int operar() {
+        return this.numero;
     }
 
 }
