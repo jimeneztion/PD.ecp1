@@ -13,4 +13,9 @@ public class Numero extends ExpresionMain {
         return this.numero;
     }
 
+   
+    public String toString() {
+        return Integer.toString(this.numero);
+    }
+
 }

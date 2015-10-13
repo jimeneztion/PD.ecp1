@@ -10,4 +10,7 @@ public class Sumar extends Operacion {
         return (this.getExpresion1().operar() + this.getExpresion2().operar());
     }
 
+    public String toString() {
+        return (this.getExpresion1().toString() + "+" + this.getExpresion2().toString());
+    }
 }

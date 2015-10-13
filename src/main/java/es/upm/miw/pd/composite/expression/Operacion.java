@@ -16,16 +16,8 @@ public abstract class Operacion extends ExpresionMain {
         return expresion1;
     }
 
-    public void setExpresion1(ExpresionMain expresion1) {
-        this.expresion1 = expresion1;
-    }
-
     public ExpresionMain getExpresion2() {
         return expresion2;
-    }
-
-    public void setExpresion2(ExpresionMain expresion2) {
-        this.expresion2 = expresion2;
     }
 
 }
