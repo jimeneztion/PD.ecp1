@@ -12,7 +12,7 @@ public class Restar extends Operacion {
 
    
     public String toString() {
-       return (this.getExpresion1().toString()  + "-" +  this.getExpresion2().toString());
+       return ("(" + this.getExpresion1().toString()  + "-" +  this.getExpresion2().toString() + ")");
     }
 
 }

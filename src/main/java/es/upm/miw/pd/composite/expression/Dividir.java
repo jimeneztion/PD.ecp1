@@ -2,7 +2,6 @@ package es.upm.miw.pd.composite.expression;
 
 public class Dividir extends Operacion {
 
-    
     public Dividir(ExpresionMain expresion1, ExpresionMain expresion2) {
         super(expresion1, expresion2);
     }
@@ -12,7 +11,7 @@ public class Dividir extends Operacion {
     }
 
     public String toString() {
-        return (this.getExpresion1().toString()  + "/" +  this.getExpresion2().toString());
-     }
-    
+        return ("(" + this.getExpresion1().toString() + "/" + this.getExpresion2().toString() + ")");
+    }
+
 }
