@@ -18,7 +18,7 @@ public class Parado extends ConexionEstado {
         conexion.setEstado(new Preparado());
     }
 
-    public void enviar(Conexion conexion) {
+    public void enviar(Conexion conexion,String msg) {
         throw new UnsupportedOperationException("Acción erronea");
     }
 

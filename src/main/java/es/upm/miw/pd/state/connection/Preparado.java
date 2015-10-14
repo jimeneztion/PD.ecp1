@@ -18,7 +18,8 @@ public class Preparado extends ConexionEstado {
         conexion.setEstado(new Preparado());
     }
 
-    public void enviar(Conexion conexion) {
+    public void enviar(Conexion conexion,String msg) {
+        conexion.getLink().enviar(msg);
         conexion.setEstado(new Esperando());
     }
 

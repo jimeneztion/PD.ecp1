@@ -25,7 +25,7 @@ public class Conexion {
     }
 
     public Estado getEstado() {
-        return this.getEstado();
+        return this.estado.getEstado();
     }
 
     public void cerrar() {
@@ -41,8 +41,13 @@ public class Conexion {
         this.estado.iniciar(this);
     }
 
-    public void enviar(String string) {
-        this.estado.iniciar(this);
+    public void enviar(String msg) {
+        this.estado.enviar(this,msg);
+    }
+
+    public void recibir(int datos) {
+        this.estado.recibir(this, datos);
+        
     }
 
 }

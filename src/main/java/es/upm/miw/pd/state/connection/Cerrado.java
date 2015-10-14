@@ -18,7 +18,7 @@ public class Cerrado extends ConexionEstado {
         throw new UnsupportedOperationException("Acción erronea");
     }
 
-    public void enviar(Conexion conexion) {
+    public void enviar(Conexion conexion,String msg) {
         throw new UnsupportedOperationException("Acción erronea");
     }
 

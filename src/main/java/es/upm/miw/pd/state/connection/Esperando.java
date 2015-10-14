@@ -18,7 +18,8 @@ public class Esperando extends ConexionEstado {
         throw new UnsupportedOperationException("Acción erronea");
     }
 
-    public void enviar(Conexion conexion) {
+    public void enviar(Conexion conexion,String msg) {
+        conexion.getLink().enviar(msg);
         throw new UnsupportedOperationException("Acción erronea");
     }
 
