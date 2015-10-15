@@ -1,17 +1,17 @@
 package es.upm.miw.pd.factoryMethod.naturalNumber;
 
-public class NaturalNumberEs extends NaturalNumber {
+public class NaturalNumberEn extends NaturalNumber {
 
-    private static final String[] textValue = {"cero", "uno", "dos", "tres", "cuatro", "cinco"};
+    private static final String[] textValue = { "zero", "one", "two", "three", "four", "five" };
 
-    public NaturalNumberEs(int value) {
+    public NaturalNumberEn(int value) {
         super(value);
     }
 
     public String getTextValue() {
         int valor = this.getValue();
         if (this.getValue() < textValue.length)
-            return NaturalNumberEs.textValue[valor];
+            return NaturalNumberEn.textValue[valor];
         else
             return "???";
 
