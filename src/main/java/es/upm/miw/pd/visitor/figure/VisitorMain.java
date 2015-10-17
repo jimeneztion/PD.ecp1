@@ -16,7 +16,7 @@ public final class VisitorMain {
     }
 
     public void visitador() {
-        VisitorFigure v1 = new VisitorFigure();
+        VisitorLados v1 = new VisitorLados();
         for (Figure elemento : coleccion) {
             elemento.accept(v1);
         }

@@ -1,12 +1,12 @@
 package es.upm.miw.pd.visitor.figure;
 
-public class VisitorFigure implements Visitor {
+public class VisitorArea implements Visitor {
 
     private double area;
 
     private final double PI = 3.14;
 
-    public VisitorFigure() {
+    public VisitorArea() {
         area = 0;
     }
 
