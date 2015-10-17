@@ -1,22 +1,23 @@
 package es.upm.miw.pd.visitor.figure;
 
-public class Circle extends Figure {
+public class Circle implements Figure {
 
     private double radius;
 
-    public Circle(String description, double radius) {
-        super(description);
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    @Override
-    public double area() {
-        return Math.PI * radius * radius;
+    public double getRadius() {
+        return radius;
     }
 
-    @Override
-    public double numberOfSides() {
-        return Double.POSITIVE_INFINITY;
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public void accept(Visitor v) {
+        v.visitCircle(this);
     }
 
 }
