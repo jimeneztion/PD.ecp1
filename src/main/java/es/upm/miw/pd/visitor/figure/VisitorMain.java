@@ -15,7 +15,14 @@ public final class VisitorMain {
         
     }
 
-    public void visitador() {
+    public void visitadorArea() {
+        VisitorArea v1 = new VisitorArea();
+        for (Figure elemento : coleccion) {
+            elemento.accept(v1);
+        }
+    }
+    
+    public void visitadorLados() {
         VisitorLados v1 = new VisitorLados();
         for (Figure elemento : coleccion) {
             elemento.accept(v1);
