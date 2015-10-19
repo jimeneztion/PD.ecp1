@@ -5,7 +5,7 @@ public class Caracter extends Componente {
     char c;
 
     public Caracter() {
-        super();
+        
     }
 
     public char getC() {

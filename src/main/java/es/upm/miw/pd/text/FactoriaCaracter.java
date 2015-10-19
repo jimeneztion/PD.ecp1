@@ -10,27 +10,28 @@ public class FactoriaCaracter {
     private List<Caracter> listado;
 
     private FactoriaCaracter() {
-        listado = new ArrayList<Caracter>();
+        this.listado = new ArrayList<Caracter>();
     }
 
     public static FactoriaCaracter getFactoria() {
         if (_instance == null)
-            new FactoriaCaracter();
+            _instance = new FactoriaCaracter();
 
         return _instance;
     }
 
     public Componente get(char c) {
-       if(this.listado.contains(c))
-           return this.listado.get(c);
-       
-       else{
-           Caracter caracter = new Caracter();
-           caracter.setC(c);
-           this.listado.add(caracter);
-           return caracter;
-       }
-           
+
+        if (this.listado.contains(c))
+            return this.listado.get(c);
+
+        else {
+            Caracter caracter = new Caracter();
+            caracter.setC(c);
+            this.listado.add(caracter);
+            return caracter;
+        }
+
     }
 
 }

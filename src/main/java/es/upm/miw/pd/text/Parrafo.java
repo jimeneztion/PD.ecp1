@@ -8,7 +8,11 @@ public class Parrafo extends Escrito {
 
     @Override
     public void add(Componente h) {
-        this.c = h;
+        if (h.esComponente()) {
+            throw new UnsupportedOperationException("Error");
+        } else {
+            listado.add(c);
+        }
 
     }
 
