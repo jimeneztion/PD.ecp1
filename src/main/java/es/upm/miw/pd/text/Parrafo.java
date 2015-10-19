@@ -2,7 +2,7 @@ package es.upm.miw.pd.text;
 
 public class Parrafo extends Escrito {
 
-    private String separator = "\n";
+    private String SEPARATOR = "\n";
 
     public void add(Componente h) {
         if (h.esComponente())
@@ -17,7 +17,7 @@ public class Parrafo extends Escrito {
             aux += this.listado.get(i).dibujar(b);
         }
 
-        return aux + separator;
+        return aux + SEPARATOR;
     }
 
 }
