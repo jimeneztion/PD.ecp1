@@ -1,16 +1,16 @@
 package es.upm.miw.pd.text;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FactoriaCaracter {
 
     private static FactoriaCaracter _instance = null;
 
-    private List<Caracter> listadoFactoria;
+    private Map<Character, Caracter> mapCaracteres = new HashMap<>();
 
     private FactoriaCaracter() {
-        this.listadoFactoria = new ArrayList<Caracter>();
+        this.mapCaracteres = new HashMap<>();
     }
 
     public static FactoriaCaracter getFactoria() {
@@ -20,15 +20,14 @@ public class FactoriaCaracter {
         return _instance;
     }
 
-    public Componente get(char c) {
+    public Caracter get(char c) {
 
-        if (this.listadoFactoria.contains(c))
-            return this.listadoFactoria.get(c);
-
-        else {
+        if (mapCaracteres.containsKey(c)) {
+            return mapCaracteres.get(c);
+        } else {
             Caracter caracter = new Caracter();
             caracter.setC(c);
-            this.listadoFactoria.add(caracter);
+            mapCaracteres.put(c, caracter);
             return caracter;
         }
 

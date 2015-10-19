@@ -12,7 +12,9 @@ public class Caracter extends Componente {
         this.c = c;
     }
 
-    public void add(Componente h) {}
+    public void add(Componente h) {
+        return;
+    }
 
     public String dibujar(boolean b) {
         if (b)

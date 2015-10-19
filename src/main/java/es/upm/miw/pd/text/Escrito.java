@@ -14,8 +14,4 @@ public abstract class Escrito extends Componente {
     public boolean esComponente() {
         return true;
     }
-    
-    
-    
-
 }
