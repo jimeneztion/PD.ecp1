@@ -1,6 +1,6 @@
 package es.upm.miw.pd.text;
 
-public class Caracter {
+public class Caracter extends Componente {
 
     char c;
 
@@ -8,22 +8,24 @@ public class Caracter {
         super();
     }
 
-    /**
-     * @return the c
-     */
     public char getC() {
         return this.c;
     }
 
-    /**
-     * @param c the c to set
-     */
     public void setC(char c) {
         this.c = c;
     }
+
+   
+    public void add(Componente h) {
+        // TODO Auto-generated method stub
+
+    }
+
     
-    
-    
-    
-    
+    public String dibujar(boolean b) {
+       if(b) return Character.toString(Character.toUpperCase(this.c));
+       else return Character.toString(this.c);
+    }
+
 }
