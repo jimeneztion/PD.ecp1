@@ -16,16 +16,20 @@ public class Caracter extends Componente {
         this.c = c;
     }
 
-   
     public void add(Componente h) {
         // TODO Auto-generated method stub
 
     }
 
-    
     public String dibujar(boolean b) {
-       if(b) return Character.toString(Character.toUpperCase(this.c));
-       else return Character.toString(this.c);
+        if (b)
+            return Character.toString(Character.toUpperCase(this.c));
+        else
+            return Character.toString(this.c);
+    }
+
+    public boolean esComponente() {
+        return false;
     }
 
 }

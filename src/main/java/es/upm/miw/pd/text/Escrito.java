@@ -12,6 +12,11 @@ public abstract class Escrito extends Componente {
         this.listado = new ArrayList<Componente>() ;
     }
     
+    public boolean esComponente() {
+        return true;
+    }
+    
+    
     
 
 }
