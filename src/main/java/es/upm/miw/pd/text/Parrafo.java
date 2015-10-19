@@ -5,12 +5,7 @@ public class Parrafo extends Escrito {
     private Componente c;
 
     private String separator = "\n";
-    
-    
 
-   
-
-    @Override
     public void add(Componente h) {
         if (h.esComponente()) {
             throw new UnsupportedOperationException("Error");
@@ -20,7 +15,6 @@ public class Parrafo extends Escrito {
 
     }
 
-    @Override
     public String dibujar(boolean b) {
         String aux = "";
         for (int i = 0; i < listado.size(); i++) {
@@ -28,17 +22,7 @@ public class Parrafo extends Escrito {
         }
 
         return aux + separator;
-        
-        
-       
 
     }
-
-    @Override
-    public String toString() {
-        return c.toString();
-    }
-
-   
 
 }

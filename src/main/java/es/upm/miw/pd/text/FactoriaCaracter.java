@@ -7,10 +7,10 @@ public class FactoriaCaracter {
 
     private static FactoriaCaracter _instance = null;
 
-    private List<Caracter> listado;
+    private List<Caracter> listadoFactoria;
 
     private FactoriaCaracter() {
-        this.listado = new ArrayList<Caracter>();
+        this.listadoFactoria = new ArrayList<Caracter>();
     }
 
     public static FactoriaCaracter getFactoria() {
@@ -22,13 +22,13 @@ public class FactoriaCaracter {
 
     public Componente get(char c) {
 
-        if (this.listado.contains(c))
-            return this.listado.get(c);
+        if (this.listadoFactoria.contains(c))
+            return this.listadoFactoria.get(c);
 
         else {
             Caracter caracter = new Caracter();
             caracter.setC(c);
-            this.listado.add(caracter);
+            this.listadoFactoria.add(caracter);
             return caracter;
         }
 

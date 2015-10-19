@@ -8,7 +8,6 @@ public abstract class Escrito extends Componente {
     public List<Componente> listado;
 
     public Escrito() {
-        super();
         this.listado = new ArrayList<Componente>() ;
     }
     
