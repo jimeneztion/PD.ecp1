@@ -1,15 +1,16 @@
 package es.upm.miw.pd.text;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FactoriaCaracter {
 
     private static FactoriaCaracter _instance = null;
-    
-    private Caracter c;
 
-    private Componente comp;
+    private List<Caracter> listado;
 
     private FactoriaCaracter() {
-        c = new Caracter();
+        listado = new ArrayList<Caracter>();
     }
 
     public static FactoriaCaracter getFactoria() {
@@ -20,7 +21,16 @@ public class FactoriaCaracter {
     }
 
     public Componente get(char c) {
-        return comp;
+       if(this.listado.contains(c))
+           return this.listado.get(c);
+       
+       else{
+           Caracter caracter = new Caracter();
+           caracter.setC(c);
+           this.listado.add(caracter);
+           return caracter;
+       }
+           
     }
 
 }

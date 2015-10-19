@@ -16,10 +16,7 @@ public class Caracter extends Componente {
         this.c = c;
     }
 
-    public void add(Componente h) {
-        // TODO Auto-generated method stub
-
-    }
+    public void add(Componente h) {}
 
     public String dibujar(boolean b) {
         if (b)

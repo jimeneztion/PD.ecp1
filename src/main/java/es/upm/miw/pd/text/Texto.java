@@ -2,6 +2,8 @@ package es.upm.miw.pd.text;
 
 public class Texto extends Escrito {
 
+    private String separator = "\n";
+
     public void add(Componente h) {
         if (h.esComponente())
             listado.add(h);
@@ -15,7 +17,7 @@ public class Texto extends Escrito {
             aux += listado.get(i).dibujar(b);
         }
 
-        return aux;
+        return aux + separator;
     }
 
 }
