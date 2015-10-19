@@ -9,7 +9,7 @@ public final class VisitorMain {
     private Collection<Figure> coleccion = new ArrayList<Figure>();
 
     public VisitorMain() {
-        coleccion.add(new Circle(12));
+        coleccion.add(new Circle(2));
         coleccion.add(new Triangle(2,3));
         coleccion.add(new Square(2));
         

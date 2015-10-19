@@ -2,35 +2,19 @@ package es.upm.miw.pd.visitor.figure;
 
 public class VisitorArea implements Visitor {
 
-    private double area;
-
-    private final double PI = 3.14;
-
-    public VisitorArea() {
-        area = 0;
-    }
-
-    public void visitCircle(Circle c) {
+    public void visitCircle(Circle circle) {
         System.out.println("Visitando circulo");
-        this.setArea(PI * c.getRadius() * c.getRadius());
+        System.out.println(circle.area());
     }
 
-    public void visitSquare(Square c) {
+    public void visitSquare(Square square) {
         System.out.println("Visitando Cuadrado");
-        this.setArea(c.getSide() * c.getSide());
+        System.out.println(square.area());
     }
 
-    public void visitTriangle(Triangle c) {
+    public void visitTriangle(Triangle triangle) {
         System.out.println("Visitando Triangulo");
-        this.setArea((c.getBase() * c.getHeight()) / 2);
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = +area;
+        System.out.println(triangle.area());
     }
 
 }

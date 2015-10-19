@@ -5,6 +5,8 @@ public class Triangle implements Figure {
 
     private double height;
 
+    private final double LADOS_TRIANGULO = 3;
+
     public Triangle(double base, double height) {
         this.base = base;
         this.height = height;
@@ -15,19 +17,19 @@ public class Triangle implements Figure {
     }
 
     public double getBase() {
-        return base;
-    }
-
-    public void setBase(double base) {
-        this.base = base;
+        return this.base;
     }
 
     public double getHeight() {
-        return height;
+        return this.height;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public double area() {
+        return ((getBase() * getHeight()) / 2);
+    }
+
+    public double lados() {
+        return this.LADOS_TRIANGULO;
     }
 
 }
