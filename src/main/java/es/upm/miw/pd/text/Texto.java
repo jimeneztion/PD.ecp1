@@ -6,7 +6,7 @@ public class Texto extends Escrito {
 
     public void add(Componente h) {
         if (h.esComponente())
-            listado.add(h);
+            this.listado.add(h);
         else
             throw new UnsupportedOperationException("error");
     }

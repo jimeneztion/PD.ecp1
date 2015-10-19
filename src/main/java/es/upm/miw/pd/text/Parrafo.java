@@ -5,13 +5,19 @@ public class Parrafo extends Escrito {
     private Componente c;
 
     private String separator = "\n";
+    
+    
+
+    public Parrafo() {
+        super();
+    }
 
     @Override
     public void add(Componente h) {
         if (h.esComponente()) {
             throw new UnsupportedOperationException("Error");
         } else {
-            listado.add(c);
+            this.listado.add(h);
         }
 
     }
