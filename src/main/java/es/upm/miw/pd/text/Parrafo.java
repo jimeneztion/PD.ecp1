@@ -8,9 +8,7 @@ public class Parrafo extends Escrito {
     
     
 
-    public Parrafo() {
-        super();
-    }
+   
 
     @Override
     public void add(Componente h) {

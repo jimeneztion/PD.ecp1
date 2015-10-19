@@ -3,6 +3,8 @@ package es.upm.miw.pd.text;
 public class Texto extends Escrito {
 
     private String separator = "\n";
+    
+    
 
     public void add(Componente h) {
         if (h.esComponente())
