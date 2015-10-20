@@ -4,33 +4,26 @@ import upm.jbb.IO;
 
 public class ComandoDeshacer extends Comando {
 
-    private Calculator calculadora;
+    private GestorMementos<MementoCalculadora> gestorMementos;
 
-    private GestorEstados gestor;
+    private Calculator calculator;
 
-    public ComandoDeshacer(Calculator calculator, GestorEstados estados) {
-        super();
-        this.calculadora = calculator;
-        this.gestor = estados;
+    public ComandoDeshacer(Originador cal, GestorMementos<MementoCalculadora> gestorMementos) {
+        this.calculator = cal;
+        this.gestorMementos = gestorMementos;
+
     }
 
+    @Override
     public String name() {
         return "Restaurar";
     }
 
+    @Override
     public void execute() {
-        if (!this.gestor.canUnStack())
-            IO.getIO().println("No existe punto de restauracion del estado del sistema");
-        else {
-            Calculator aux = this.gestor.unstack();
-            setCalculadora(aux);
-            IO.getIO().println("Restaurando estado del sistema");
-        }
-
-    }
-
-    public void setCalculadora(Calculator calculadora) {
-        this.calculadora.setTotal(calculadora.getTotal());
+        String clave = (String) IO.getIO().select(gestorMementos.keys());
+        ((Originador) calculator).restoreMemento(gestorMementos.getMemento(clave));
+        IO.getIO().println("Restaurando estado del sistema");
     }
 
 }

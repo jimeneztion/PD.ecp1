@@ -6,16 +6,15 @@ public class MainCalculator {
     private CommandManager commandManager;
 
     public MainCalculator() {
-        Calculator calculator = new Calculator();
-        Stack<Calculator> pilaEstados = new Stack<Calculator>();
-        GestorEstados gestorEstados = new GestorEstados(pilaEstados);
+        Originador calculator = new Originador();
+        GestorMementos<MementoCalculadora> gestorMementos = new GestorMementos<>();
         this.commandManager = new CommandManager();
         this.commandManager.add(new AddCommand(calculator));
         this.commandManager.add(new SubtractCommand(calculator));
         this.commandManager.add(new ResetCommand(calculator));
         this.commandManager.add(new PrintCommand(calculator));
-        this.commandManager.add(new ComandoGuardar(calculator,gestorEstados));
-        this.commandManager.add(new ComandoDeshacer(calculator,gestorEstados));
+        this.commandManager.add(new ComandoGuardar(calculator, gestorMementos));
+        this.commandManager.add(new ComandoDeshacer(calculator, gestorMementos));
     }
 
     public void execute() {

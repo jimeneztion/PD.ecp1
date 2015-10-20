@@ -4,25 +4,27 @@ import upm.jbb.IO;
 
 public class ComandoGuardar extends Comando {
 
-    private Calculator calculadora;
-    private GestorEstados gestor;
+    private GestorMementos<MementoCalculadora> gestorMementos;
+    private Calculator calculator;
 
-    public ComandoGuardar(Calculator calculator,GestorEstados estados) {
-        super();
-        this.calculadora = calculator;
-        this.gestor = estados;
+
+    public ComandoGuardar(Originador cal, GestorMementos<MementoCalculadora> gestorMementos) {
+        this.calculator = cal;
+        this.gestorMementos = gestorMementos;
+
     }
 
+    @Override
     public String name() {
         return "Guardar";
     }
 
+    @Override
     public void execute() {
-        Calculator aux = new Calculator();
-        int total = this.calculadora.getTotal();
-        aux.setTotal(total);
-        this.gestor.stack(aux);
-       IO.getIO().println("Guardado estado del sistema");
+        String clave = IO.getIO().readString();
+        gestorMementos.addMemento(clave, ((Originador) calculator).createMemento());
+        IO.getIO().println("Guardado estado del sistema");
     }
 
 }
+
