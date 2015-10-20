@@ -1,6 +1,6 @@
 package es.upm.miw.pd.command.calculator.memento;
 
-public class Calculator implements StackElement {
+public class Calculator{
     private int total;
 
     public Calculator() {

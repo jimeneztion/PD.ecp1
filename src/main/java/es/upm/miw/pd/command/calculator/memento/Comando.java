@@ -1,6 +1,6 @@
 package es.upm.miw.pd.command.calculator.memento;
 
-public abstract class Comando extends GestorEstados {
+public abstract class Comando {
 
     public Comando() {
         super();
