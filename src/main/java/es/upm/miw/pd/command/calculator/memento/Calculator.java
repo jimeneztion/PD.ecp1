@@ -1,6 +1,6 @@
 package es.upm.miw.pd.command.calculator.memento;
 
-public class Calculator {
+public class Calculator implements StackElement {
     private int total;
 
     public Calculator() {
@@ -25,5 +25,9 @@ public class Calculator {
 
     public void reset() {
         this.setTotal(0);
+    }
+
+    public boolean isMultiUnstakable() {
+        return false;
     }
 }

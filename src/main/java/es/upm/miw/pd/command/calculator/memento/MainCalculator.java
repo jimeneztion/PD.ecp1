@@ -7,11 +7,15 @@ public class MainCalculator {
 
     public MainCalculator() {
         Calculator calculator = new Calculator();
+        Stack<Calculator> pilaEstados = new Stack<Calculator>();
+        GestorEstados gestorEstados = new GestorEstados(pilaEstados);
         this.commandManager = new CommandManager();
         this.commandManager.add(new AddCommand(calculator));
         this.commandManager.add(new SubtractCommand(calculator));
         this.commandManager.add(new ResetCommand(calculator));
         this.commandManager.add(new PrintCommand(calculator));
+        this.commandManager.add(new ComandoGuardar(calculator,gestorEstados));
+        this.commandManager.add(new ComandoDeshacer(calculator,gestorEstados));
     }
 
     public void execute() {
