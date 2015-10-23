@@ -14,12 +14,10 @@ public class ComandoDeshacer extends Comando {
 
     }
 
-    @Override
     public String name() {
         return "Restaurar";
     }
 
-    @Override
     public void execute() {
         String clave = (String) IO.getIO().select(gestorMementos.keys());
         ((Originador) calculator).restoreMemento(gestorMementos.getMemento(clave));

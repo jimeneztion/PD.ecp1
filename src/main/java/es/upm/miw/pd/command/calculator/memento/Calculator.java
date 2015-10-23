@@ -1,6 +1,6 @@
 package es.upm.miw.pd.command.calculator.memento;
 
-public class Calculator{
+public class Calculator {
     private int total;
 
     public Calculator() {
@@ -9,10 +9,6 @@ public class Calculator{
 
     public int getTotal() {
         return total;
-    }
-
-    protected void setTotal(int total) {
-        this.total = total;
     }
 
     public void add(int valor) {
@@ -29,5 +25,9 @@ public class Calculator{
 
     public boolean isMultiUnstakable() {
         return false;
+    }
+
+    protected void setTotal(int total) {
+        this.total = total;
     }
 }

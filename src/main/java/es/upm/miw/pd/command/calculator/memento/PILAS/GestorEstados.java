@@ -1,19 +1,18 @@
 package es.upm.miw.pd.command.calculator.memento.PILAS;
 
 public class GestorEstados {
-    
+
     protected Stack<Calculator> pilaDeEstados;
 
     public GestorEstados() {
         this.pilaDeEstados = new Stack<Calculator>();
     }
-    
+
     public GestorEstados(Stack<Calculator> pilaDeEstados) throws NullPointerException {
         if (pilaDeEstados == null)
             throw new NullPointerException("Cola no puede ser nula");
         this.pilaDeEstados = pilaDeEstados;
     }
-    
 
     public Calculator top() {
         if (!canUnStack())

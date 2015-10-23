@@ -4,29 +4,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReferencesFactory {
-    
+
     private Map<String, Integer> references;
 
     private int reference;
-    
+
     private static ReferencesFactory _instance = null;
-    
-    
-    public static ReferencesFactory getFactory(){
-        if(_instance == null)
+
+    public static ReferencesFactory getFactory() {
+        if (_instance == null)
             _instance = new ReferencesFactory();
-        
+
         return _instance;
     }
-    
 
     private ReferencesFactory() {
         this.references = new HashMap<>();
         this.reference = 0;
     }
-    
-    
-    
 
     public int getReference(String key) {
         Integer result = this.references.get(key);

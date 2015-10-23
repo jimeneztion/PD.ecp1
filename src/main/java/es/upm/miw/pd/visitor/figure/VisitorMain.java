@@ -10,9 +10,9 @@ public final class VisitorMain {
 
     public VisitorMain() {
         coleccion.add(new Circle(2));
-        coleccion.add(new Triangle(2,3));
+        coleccion.add(new Triangle(2, 3));
         coleccion.add(new Square(2));
-        
+
     }
 
     public void visitadorArea() {
@@ -21,7 +21,7 @@ public final class VisitorMain {
             elemento.accept(v1);
         }
     }
-    
+
     public void visitadorLados() {
         VisitorLados v1 = new VisitorLados();
         for (Figure elemento : coleccion) {

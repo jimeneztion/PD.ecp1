@@ -18,7 +18,7 @@ public class Preparado extends ConexionEstado {
         conexion.setEstado(new Preparado());
     }
 
-    public void enviar(Conexion conexion,String msg) {
+    public void enviar(Conexion conexion, String msg) {
         conexion.getLink().enviar(msg);
         conexion.setEstado(new Esperando());
     }
@@ -27,7 +27,7 @@ public class Preparado extends ConexionEstado {
         conexion.setEstado(new Parado());
     }
 
-    public void recibir(Conexion conexion,int estado) {
+    public void recibir(Conexion conexion, int estado) {
         throw new UnsupportedOperationException("Acción erronea");
     }
 }

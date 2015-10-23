@@ -6,7 +6,6 @@ public class Multiplicar extends Operacion {
         super(expresion1, expresion2);
     }
 
-    @Override
     public int operar() {
         return (this.getExpresion1().operar() * this.getExpresion2().operar());
     }

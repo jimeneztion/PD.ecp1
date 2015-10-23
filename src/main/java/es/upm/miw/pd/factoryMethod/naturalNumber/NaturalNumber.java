@@ -3,9 +3,8 @@ package es.upm.miw.pd.factoryMethod.naturalNumber;
 public abstract class NaturalNumber {
     private int value;
 
-    
     public NaturalNumber(int value) {
-       this.value = value;
+        this.value = value;
     }
 
     public int getValue() {

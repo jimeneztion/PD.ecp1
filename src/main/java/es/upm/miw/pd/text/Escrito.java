@@ -8,9 +8,9 @@ public abstract class Escrito extends Componente {
     public List<Componente> listado;
 
     public Escrito() {
-        this.listado = new ArrayList<Componente>() ;
+        this.listado = new ArrayList<Componente>();
     }
-    
+
     public boolean esComponente() {
         return true;
     }

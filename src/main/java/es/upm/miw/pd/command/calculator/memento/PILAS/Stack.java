@@ -8,9 +8,6 @@ public class Stack<T extends StackElement> implements Iterable<T> {
 
     protected List<T> list;
 
-    /**
-     * Construct an empty randomized queue
-     */
     public Stack() {
         list = new ArrayList<T>();
     }
@@ -23,11 +20,6 @@ public class Stack<T extends StackElement> implements Iterable<T> {
         return list.size();
     }
 
-    /**
-     * Add the item
-     * 
-     * @param item
-     */
     public Stack<T> stack(T item) {
         if (item == null) {
             throw new java.lang.NullPointerException();
@@ -36,12 +28,6 @@ public class Stack<T extends StackElement> implements Iterable<T> {
         return this;
     }
 
-    /**
-     * Add the item
-     * 
-     * @param item
-     * @return
-     */
     public Stack<T> stackAll(Stack<T> itemList) {
         if (itemList == null) {
             throw new java.lang.NullPointerException();
@@ -52,11 +38,6 @@ public class Stack<T extends StackElement> implements Iterable<T> {
         return this;
     }
 
-    /**
-     * delete and return a random item
-     * 
-     * @return
-     */
     public synchronized T unstack() {
         if (isEmpty()) {
             throw new java.util.NoSuchElementException();
@@ -72,11 +53,6 @@ public class Stack<T extends StackElement> implements Iterable<T> {
         return res_stack;
     }
 
-    /**
-     * delete and return a random item
-     * 
-     * @return
-     */
     public synchronized Stack<T> sampleMultiUnstakables() {
         Stack<T> res_stack = new Stack<T>();
         for (int i = list.size() - 1; i >= 0; i--) {
@@ -89,11 +65,6 @@ public class Stack<T extends StackElement> implements Iterable<T> {
         return res_stack;
     }
 
-    /**
-     * return (but do not delete) a random item
-     * 
-     * @return
-     */
     public T sample() {
         if (isEmpty()) {
             throw new java.util.NoSuchElementException();
@@ -120,11 +91,6 @@ public class Stack<T extends StackElement> implements Iterable<T> {
         }
     }
 
-    /**
-     * return an independent iterator over items in random order
-     * 
-     * @return
-     */
     public Iterator<T> iterator() {
         return new StackIterator<T>();
     }

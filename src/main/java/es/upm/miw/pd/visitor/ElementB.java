@@ -15,7 +15,6 @@ public class ElementB implements Element {
         this.attributeB = attributeB;
     }
 
-    @Override
     public void accept(Visitor v) {
         v.visitElementB(this);
     }

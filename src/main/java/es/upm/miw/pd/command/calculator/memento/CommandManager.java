@@ -3,8 +3,6 @@ package es.upm.miw.pd.command.calculator.memento;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
 public class CommandManager {
     private Map<String, Comando> comandos = new HashMap<>();
 

@@ -34,7 +34,7 @@ public class Conexion {
 
     public void parar() {
         this.estado.parar(this);
-        
+
     }
 
     public void iniciar() {
@@ -42,12 +42,12 @@ public class Conexion {
     }
 
     public void enviar(String msg) {
-        this.estado.enviar(this,msg);
+        this.estado.enviar(this, msg);
     }
 
     public void recibir(int datos) {
         this.estado.recibir(this, datos);
-        
+
     }
 
 }

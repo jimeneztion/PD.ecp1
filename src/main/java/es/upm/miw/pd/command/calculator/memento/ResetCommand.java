@@ -4,13 +4,12 @@ import upm.jbb.IO;
 
 public class ResetCommand extends Comando {
 
-    private Calculator cal; 
+    private Calculator cal;
 
     public ResetCommand(Calculator cal) {
-       this.cal = cal;
+        this.cal = cal;
     }
 
-    
     public String name() {
         return "Resta";
     }

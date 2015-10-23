@@ -14,8 +14,8 @@ public class MainCalculator {
         this.commandManager.add(new SubtractCommand(calculator));
         this.commandManager.add(new ResetCommand(calculator));
         this.commandManager.add(new PrintCommand(calculator));
-        this.commandManager.add(new ComandoGuardar(calculator,gestorEstados));
-        this.commandManager.add(new ComandoDeshacer(calculator,gestorEstados));
+        this.commandManager.add(new ComandoGuardar(calculator, gestorEstados));
+        this.commandManager.add(new ComandoDeshacer(calculator, gestorEstados));
     }
 
     public void execute() {

@@ -5,8 +5,8 @@ import upm.jbb.IO;
 public class ComandoGuardar extends Comando {
 
     private GestorMementos<MementoCalculadora> gestorMementos;
-    private Calculator calculator;
 
+    private Calculator calculator;
 
     public ComandoGuardar(Originador cal, GestorMementos<MementoCalculadora> gestorMementos) {
         this.calculator = cal;
@@ -14,12 +14,10 @@ public class ComandoGuardar extends Comando {
 
     }
 
-    @Override
     public String name() {
         return "Guardar";
     }
 
-    @Override
     public void execute() {
         String clave = IO.getIO().readString();
         gestorMementos.addMemento(clave, ((Originador) calculator).createMemento());
@@ -27,4 +25,3 @@ public class ComandoGuardar extends Comando {
     }
 
 }
-
